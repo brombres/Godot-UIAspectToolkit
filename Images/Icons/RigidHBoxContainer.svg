@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>RigidHBoxContainer</title>
+    <g id="RigidHBoxContainer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(8, 8) rotate(90) translate(-8, -8)translate(1, 1)" fill="#8EEF97" fill-rule="nonzero">
+            <path d="M10,8.8817842e-16 C11.1045695,8.8817842e-16 12,0.8954305 12,2 L12,12 C12,13.1045695 11.1045695,14 10,14 L4,14 C2.8954305,14 2,13.1045695 2,12 L2,2 C2,0.8954305 2.8954305,8.8817842e-16 4,8.8817842e-16 L10,8.8817842e-16 Z M4,10 L4,12 L10,12 L10,10 L4,10 Z M10,2 L4,2 L4,4 L10,4 L10,2 Z M4,8 L10,8 L10,6 L4,6 L4,8 Z M1,0 L1,14 L0,14 L0,0 L1,0 Z M14,8.8817842e-16 L14,14 L13,14 L13,8.8817842e-16 L14,8.8817842e-16 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>
