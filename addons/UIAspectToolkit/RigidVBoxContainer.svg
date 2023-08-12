@@ -2,10 +2,6 @@
 <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>RigidVBoxContainer</title>
     <g id="RigidVBoxContainer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="Rectangle" stroke="#8EEF97" stroke-width="2" x="4" y="2" width="8" height="12" rx="2"></rect>
-        <rect id="Rectangle-Copy-3" stroke="#8EEF97" stroke-width="2" x="6" y="6" width="4" height="1"></rect>
-        <rect id="Rectangle-Copy-4" stroke="#8EEF97" stroke-width="2" x="6" y="10" width="4" height="1"></rect>
-        <rect id="Rectangle-Copy" stroke="#8EEF97" stroke-width="2" x="2" y="2" width="1" height="12"></rect>
-        <rect id="Rectangle-Copy-2" stroke="#8EEF97" stroke-width="2" x="15" y="2" width="1" height="12"></rect>
+        <path d="M11,1 C12.1045695,1 13,1.8954305 13,3 L13,13 C13,14.1045695 12.1045695,15 11,15 L5,15 C3.8954305,15 3,14.1045695 3,13 L3,3 C3,1.8954305 3.8954305,1 5,1 L11,1 Z M5,11 L5,13 L11,13 L11,11 L5,11 Z M11,3 L5,3 L5,5 L11,5 L11,3 Z M5,9 L11,9 L11,7 L5,7 L5,9 Z M2,1 L2,15 L1,15 L1,1 L2,1 Z M15,1 L15,15 L14,15 L14,1 L15,1 Z" id="Combined-Shape" fill="#8EEF97" fill-rule="nonzero"></path>
     </g>
 </svg>

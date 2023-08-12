@@ -44,8 +44,7 @@ func _ready():
 	adjust_size()
 
 func _enter_tree():
-	var parent = get_parent()
-	parent.resized.connect( adjust_size )
+	get_parent().resized.connect( adjust_size )
 
 func _exit_tree():
 	var parent = get_parent()

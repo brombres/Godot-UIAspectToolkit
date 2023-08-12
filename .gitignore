@@ -36,6 +36,7 @@ $RECYCLE.BIN/
 
 # Rogo
 .rogo
+BuildLocal.rogue
 
 # Vim
 *.swp

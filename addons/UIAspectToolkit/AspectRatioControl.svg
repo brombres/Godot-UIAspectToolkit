@@ -2,6 +2,6 @@
 <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>AspectRatioControl</title>
     <g id="AspectRatioControl" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="" id="Combined-Shape" stroke="#8EEF97" stroke-width="2"></path>
+        <path d="M8,1 C10.7614237,1 13,3.23857625 13,6 L13,10 C13,12.7614237 10.7614237,15 8,15 C5.23857625,15 3,12.7614237 3,10 L3,6 C3,3.23857625 5.23857625,1 8,1 Z M8,3 C6.34314575,3 5,4.34314575 5,6 L5,10 C5,11.6568542 6.34314575,13 8,13 C9.65685425,13 11,11.6568542 11,10 L11,6 C11,4.34314575 9.65685425,3 8,3 Z" id="Combined-Shape" fill="#8EEF97" fill-rule="nonzero"></path>
     </g>
 </svg>

@@ -12,6 +12,7 @@ func _enter_tree():
 	add_custom_type("RigidHBoxContainer",       "Container",   preload("RigidHBoxContainer.gd"), preload("RigidHBoxContainer.svg"))
 	add_custom_type("RigidVBoxContainer",       "Container",   preload("RigidVBoxContainer.gd"), preload("RigidVBoxContainer.svg"))
 	add_custom_type("MaxSizeContainer",     "MarginContainer", preload("MaxSizeContainer.gd"), preload("MaxSizeContainer.svg"))
+	add_custom_type("ScalingLabel",         "Label",           preload("ScalingLabel.gd"), preload("ScalingLabel.svg"))
 	add_custom_type("ScalingRichTextLabel", "RichTextLabel",   preload("ScalingRichTextLabel.gd"), preload("ScalingRichTextLabel.svg"))
 
 func _exit_tree():
@@ -22,4 +23,5 @@ func _exit_tree():
 	remove_custom_type("RigidHBoxContainer")
 	remove_custom_type("RigidVBoxContainer")
 	remove_custom_type("MaxSizeContainer")
+	remove_custom_type("ScalingLabel")
 	remove_custom_type("ScalingRichTextLabel")
