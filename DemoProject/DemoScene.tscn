@@ -1,0 +1,250 @@
+[gd_scene load_steps=8 format=3 uid="uid://dl7qkq270wjvi"]
+
+[ext_resource type="Script" path="res://addons/UIAspectToolkit/MaxSizeContainer.gd" id="1_74cuv"]
+[ext_resource type="Script" path="res://addons/UIAspectToolkit/InitialWindowSizeControl.gd" id="1_r2vgd"]
+[ext_resource type="Script" path="res://addons/UIAspectToolkit/RigidVBoxContainer.gd" id="2_3h4c3"]
+[ext_resource type="Script" path="res://WindowAnimation.gd" id="2_c0dbn"]
+[ext_resource type="Script" path="res://addons/UIAspectToolkit/AspectRatioControl.gd" id="3_2ppy2"]
+[ext_resource type="Script" path="res://addons/UIAspectToolkit/ScalingRichTextLabel.gd" id="3_nmmm0"]
+[ext_resource type="Script" path="res://addons/UIAspectToolkit/ScalingLabel.gd" id="4_xfrm5"]
+
+[node name="InitialWindowSizeControl" type="Control"]
+layout_mode = 3
+anchor_right = 0.178597
+anchor_bottom = 0.34079
+offset_right = -0.743748
+offset_bottom = -0.831922
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r2vgd")
+initial_window_size = Vector2(205, 220)
+metadata/_edit_use_anchors_ = true
+
+[node name="WindowAnimation" type="Node2D" parent="."]
+script = ExtResource("2_c0dbn")
+
+[node name="WhiteBG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RigidVBoxContainer" type="Container" parent="WhiteBG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_3h4c3")
+
+[node name="AspectRatioControl" type="Control" parent="WhiteBG/RigidVBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("3_2ppy2")
+mode = 1
+aspect = Vector2(400, 30)
+
+[node name="ColorRect" type="ColorRect" parent="WhiteBG/RigidVBoxContainer/AspectRatioControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0, 1)
+
+[node name="ScalingLabel" type="Label" parent="WhiteBG/RigidVBoxContainer/AspectRatioControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "400+:30 AspectRatioControl in RigidVBoxContainer"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_xfrm5")
+lock_reference_values = true
+reference_node_height = 30.0
+reference_font_size = 16.0
+
+[node name="GridContainer" type="GridContainer" parent="WhiteBG/RigidVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="BlackBG" type="ColorRect" parent="WhiteBG/RigidVBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="MaxSizeContainer" type="MarginContainer" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+script = ExtResource("1_74cuv")
+limit = Vector2(100, 100)
+
+[node name="ColorRect" type="ColorRect" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG/MaxSizeContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG/MaxSizeContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "100x100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlackBG2" type="ColorRect" parent="WhiteBG/RigidVBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="MaxSizeContainer" type="MarginContainer" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 13
+script = ExtResource("1_74cuv")
+mode = 1
+limit = Vector2(4, 3)
+
+[node name="ColorRect" type="ColorRect" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG2/MaxSizeContainer"]
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="ScalingRichTextLabel" type="RichTextLabel" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG2/MaxSizeContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.7
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 8
+theme_override_font_sizes/italics_font_size = 8
+theme_override_font_sizes/bold_italics_font_size = 8
+theme_override_font_sizes/mono_font_size = 8
+bbcode_enabled = true
+text = "[center]4:3
+(ScalingRTL)"
+scroll_active = false
+script = ExtResource("3_nmmm0")
+lock_reference_values = true
+reference_node_height = 60.0
+reference_font_sizes = Array[float]([20.0, 16.0, 16.0, 16.0, 16.0])
+metadata/_edit_use_anchors_ = true
+
+[node name="BlackBG3" type="ColorRect" parent="WhiteBG/RigidVBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="MaxSizeContainer" type="MarginContainer" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 12
+script = ExtResource("1_74cuv")
+mode = 2
+limit = Vector2(4, 3)
+
+[node name="ColorRect" type="ColorRect" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG3/MaxSizeContainer"]
+layout_mode = 2
+color = Color(0, 1, 0, 1)
+
+[node name="ScalingLabel" type="Label" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG3/MaxSizeContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "4:3 or Wider
+(ScalingLabel)"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_xfrm5")
+lock_reference_values = true
+reference_node_height = 148.0
+reference_font_size = 20.0
+
+[node name="BlackBG4" type="ColorRect" parent="WhiteBG/RigidVBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="MaxSizeContainer" type="MarginContainer" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+script = ExtResource("1_74cuv")
+mode = 3
+limit = Vector2(4, 3)
+
+[node name="ColorRect" type="ColorRect" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG4/MaxSizeContainer"]
+layout_mode = 2
+color = Color(0, 0, 1, 1)
+
+[node name="ScalingLabel" type="Label" parent="WhiteBG/RigidVBoxContainer/GridContainer/BlackBG4/MaxSizeContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 13
+text = "4:3 or Taller
+(ScalingLabel)"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_xfrm5")
+lock_reference_values = true
+reference_node_height = 148.0
+reference_font_size = 20.0
