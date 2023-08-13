@@ -23,6 +23,8 @@ func on_sort_children():
 	# Gather child height info
 	for i in range(get_child_count()):
 		var child = get_child(i)
+		if not child.is_visible(): continue
+
 		min_height += child.get_combined_minimum_size().y
 		if child.size_flags_vertical & SizeFlags.SIZE_EXPAND:
 			expand_count += 1
@@ -36,6 +38,8 @@ func on_sort_children():
 	var remaining_height = excess_height  # remaining height to distribute via fill or expand
 	for i in range(get_child_count()):
 		var child = get_child(i)
+		if not child.is_visible(): continue
+
 		var child_size = child.get_combined_minimum_size()
 
 		var h = int(child_size.y)
@@ -60,4 +64,3 @@ func on_sort_children():
 
 		fit_child_in_rect( child, Rect2(pos_x,pos_y,w,h) )
 		pos_y += h
-

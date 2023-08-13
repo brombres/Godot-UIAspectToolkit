@@ -70,13 +70,17 @@ func adjust_size():
 				custom_minimum_size.y = fit_h
 
 		Mode.ASPECT_OR_WIDER:
-			if fit_w <= parent_size.x:
-				custom_minimum_size.y = parent_size.y
-			else:
+			if fit_h <= parent_size.y:
+				custom_minimum_size.x = parent_size.x
 				custom_minimum_size.y = fit_h
+			else:
+				custom_minimum_size = parent_size
 
 		Mode.ASPECT_OR_TALLER:
 			if fit_w <= parent_size.x:
 				custom_minimum_size.x = fit_w
+				custom_minimum_size.y = parent_size.y
 			else:
-				custom_minimum_size.x = parent_size.x
+				custom_minimum_size = parent_size
+
+	size = custom_minimum_size
